@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "web2md-mcp"
+version = "0.1.0"
+description = "MCP server for Web2MD — Convert URLs to clean Markdown for AI agents"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+
+[project.urls]
+Homepage = "https://github.com/astra-intelligence/web2md-mcp"
+Source = "https://github.com/astra-intelligence/web2md-mcp"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/web2md_mcp"]
+
+[project.scripts]
+web2md-mcp = "web2md_mcp:main"
