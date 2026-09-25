@@ -8,7 +8,24 @@ Works with **Claude Desktop, Cursor, Continue.dev, Windsurf, and any MCP-compati
 
 ## Quick Start
 
-### Using uvx (recommended)
+### From source (GitHub)
+
+```bash
+git clone https://github.com/astra-intelligence/web2md-mcp.git
+cd web2md-mcp
+pip install .
+# or: uv sync
+```
+
+### Using pip (once published)
+
+> ⏳ Pending PyPI publication. Until then, use the source install above.
+
+```bash
+pip install web2md-mcp
+```
+
+### Using uvx (once published)
 
 Add to your Claude Desktop config (`claude_desktop_config.json`):
 
@@ -22,14 +39,6 @@ Add to your Claude Desktop config (`claude_desktop_config.json`):
   }
 }
 ```
-
-### Using pip
-
-```bash
-pip install web2md-mcp
-```
-
-Then configure your MCP client to use the `web2md-mcp` command.
 
 ## Usage
 
@@ -56,11 +65,21 @@ Returns clean Markdown content ready for LLM consumption.
 
 ## About Web2MD
 
-Web2MD is a URL-to-Markdown conversion API. This MCP server wraps the API so AI agents can use it directly.
+Web2MD is a URL-to-Markdown conversion API running at **167.233.135.161:9999**. This MCP server wraps the API so AI agents can use it directly.
 
-👉 **Get Web2MD on Gumroad: [https://grantshatz.gumroad.com/l/mpkqyq](https://grantshatz.gumroad.com/l/mpkqyq)** ($1)
+**Free tier:** 10 conversions/day per IP — no signup, no API key.
 
-The Web2MD API runs 24/7, requires no authentication, and is backed by robust readability extraction.
+👉 **Get unlimited access on Gumroad: [https://grantshatz.gumroad.com/l/mpkqyq](https://grantshatz.gumroad.com/l/mpkqyq)** ($1+)
+
+## Direct API Usage
+
+You can also use the API directly without the MCP server:
+
+```bash
+curl "http://167.233.135.161:9999/api/convert?url=https://example.com/"
+```
+
+Free tier: 10/day/IP. Add `?license_key=YOUR_KEY` for unlimited access.
 
 ## License
 
