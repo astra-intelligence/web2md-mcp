@@ -10,17 +10,9 @@
   },
   "packages": [
     {
-      "registryType": "github-release",
+      "registryType": "mcpb",
       "identifier": "astra-intelligence/web2md-mcp",
-      "version": "0.1.0",
-      "transport": {
-        "type": "stdio",
-        "command": [
-          "python3",
-          "-m",
-          "web2md_mcp"
-        ]
-      }
+      "version": "0.1.0"
     }
   ],
   "tools": [
