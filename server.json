@@ -11,7 +11,7 @@
   "packages": [
     {
       "registryType": "mcpb",
-      "identifier": "astra-intelligence/web2md-mcp",
+      "identifier": "https://github.com/astra-intelligence/web2md-mcp/releases/download/v0.1.0/web2md-mcp.tar.gz",
       "version": "0.1.0",
       "transport": {
         "type": "stdio",
