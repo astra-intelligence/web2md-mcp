@@ -1,0 +1,42 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.astra-intelligence/web2md-mcp",
+  "title": "Web2MD MCP Server",
+  "description": "Convert any public URL to clean, readable Markdown for AI agents. Strips ads, navigation, and boilerplate. Returns LLM-ready text perfect for RAG, research, and content extraction.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/astra-intelligence/web2md-mcp",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "github-release",
+      "identifier": "astra-intelligence/web2md-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio",
+        "command": ["python3", "-m", "web2md_mcp"]
+      }
+    }
+  ],
+  "tools": [
+    {
+      "name": "web2md_convert",
+      "description": "Convert any public URL to clean, readable Markdown. Free tier: 10 conversions/day per IP. Get unlimited: https://grantshatz.gumroad.com/l/mpkqyq",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "The URL to convert to Markdown"
+          }
+        },
+        "required": ["url"]
+      }
+    }
+  ],
+  "publisher": {
+    "name": "Adventure Products",
+    "url": "https://github.com/astra-intelligence"
+  }
+}
