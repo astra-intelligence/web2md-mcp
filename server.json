@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.astra-intelligence/web2md-mcp",
   "title": "Web2MD MCP Server",
-  "description": "Convert any public URL to clean, readable Markdown for AI agents. Strips ads, navigation, and boilerplate. Returns LLM-ready text perfect for RAG, research, and content extraction.",
+  "description": "Convert any public URL to clean, readable Markdown for AI agents. Strips ads, navigation, and boi...",
   "version": "0.1.0",
   "repository": {
     "url": "https://github.com/astra-intelligence/web2md-mcp",
@@ -15,7 +15,11 @@
       "version": "0.1.0",
       "transport": {
         "type": "stdio",
-        "command": ["python3", "-m", "web2md_mcp"]
+        "command": [
+          "python3",
+          "-m",
+          "web2md_mcp"
+        ]
       }
     }
   ],
@@ -31,7 +35,9 @@
             "description": "The URL to convert to Markdown"
           }
         },
-        "required": ["url"]
+        "required": [
+          "url"
+        ]
       }
     }
   ],
