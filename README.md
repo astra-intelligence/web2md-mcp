@@ -84,3 +84,12 @@ Free tier: 10/day/IP. Add `?license_key=YOUR_KEY` for unlimited access.
 ## License
 
 MIT
+
+---
+
+## Support
+
+If you find this project useful, consider [buying me a coffee](https://buymeacoffee.com/grantshatzer) or [sponsoring on GitHub](https://github.com/sponsors/astra-intelligence).
+
+Check out more tools at [grantshatz.gumroad.com](https://grantshatz.gumroad.com).
+
