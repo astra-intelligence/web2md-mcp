@@ -1,50 +1,17 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.astra-intelligence/web2md-mcp",
-  "title": "Web2MD MCP Server",
-  "description": "Convert any public URL to clean, readable Markdown for AI agents. Strips ads, navigation, and boi...",
-  "version": "0.1.0",
+  "name": "io.github.astra-intelligence/web2md",
+  "description": "Convert any URL to clean Markdown. Free: 10/day. Unlimited via license key.",
   "repository": {
     "url": "https://github.com/astra-intelligence/web2md-mcp",
     "source": "github"
   },
-  "packages": [
+  "version": "0.2.0",
+  "websiteUrl": "https://grantshatz.gumroad.com/l/mpkqyq",
+  "remotes": [
     {
-      "registryType": "mcpb",
-      "identifier": "https://github.com/astra-intelligence/web2md-mcp/releases/download/v0.1.0/web2md-mcp.tar.gz",
-      "version": "0.1.0",
-      "transport": {
-        "type": "stdio",
-        "command": [
-          "python3",
-          "-m",
-          "web2md_mcp"
-        ]
-      },
-      "fileSha256": "223741672260143b14db3fd6083bf69bce43857e6d5fb25c34357771d3344cec",
-      "fileSize": 3813
+      "type": "streamable-http",
+      "url": "https://167.233.135.161:9999/mcp"
     }
-  ],
-  "tools": [
-    {
-      "name": "web2md_convert",
-      "description": "Convert any public URL to clean, readable Markdown. Free tier: 10 conversions/day per IP. Get unlimited: https://grantshatz.gumroad.com/l/mpkqyq",
-      "inputSchema": {
-        "type": "object",
-        "properties": {
-          "url": {
-            "type": "string",
-            "description": "The URL to convert to Markdown"
-          }
-        },
-        "required": [
-          "url"
-        ]
-      }
-    }
-  ],
-  "publisher": {
-    "name": "Adventure Products",
-    "url": "https://github.com/astra-intelligence"
-  }
+  ]
 }
