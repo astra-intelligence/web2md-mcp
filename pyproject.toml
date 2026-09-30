@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "web2md-mcp"
-version = "0.2.0"
+version = "0.3.0"
 description = "MCP server for Web2MD — Convert URLs to clean Markdown for AI agents"
 requires-python = ">=3.10"
 license = {text = "MIT"}

@@ -39,7 +39,7 @@ import urllib.error
 from pathlib import Path
 from typing import Any
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 
 # Web2MD API endpoint
 WEB2MD_API = "http://167.233.135.161:9999/api/convert"
