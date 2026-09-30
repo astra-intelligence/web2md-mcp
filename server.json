@@ -1,7 +1,7 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.astra-intelligence/web2md",
-  "description": "Convert any URL to clean Markdown. Free tier: 10 conversions/day. Unlimited via purchase at grantshatz.gumroad.com/l/mpkqyq ($1+)",
+  "description": "Convert any URL to clean Markdown. Free tier: 10/day. Unlimited via Gumroad license.",
   "repository": {
     "url": "https://github.com/astra-intelligence/web2md-mcp",
     "source": "github"
