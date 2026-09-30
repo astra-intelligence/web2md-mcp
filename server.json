@@ -1,17 +1,19 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.astra-intelligence/web2md",
-  "description": "Convert any URL to clean Markdown. Free: 10/day. Unlimited via license key.",
+  "description": "Convert any URL to clean Markdown. Free tier: 10 conversions/day. Unlimited via purchase at grantshatz.gumroad.com/l/mpkqyq ($1+)",
   "repository": {
     "url": "https://github.com/astra-intelligence/web2md-mcp",
     "source": "github"
   },
   "version": "0.2.0",
   "websiteUrl": "https://grantshatz.gumroad.com/l/mpkqyq",
-  "remotes": [
+  "installations": [
     {
-      "type": "streamable-http",
-      "url": "https://167.233.135.161:9999/mcp"
+      "type": "cli",
+      "command": "uvx",
+      "args": ["web2md-mcp"],
+      "description": "Run via uvx (pip-based PyPI package). Requires Python 3.10+."
     }
   ]
 }
