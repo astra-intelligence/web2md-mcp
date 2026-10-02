@@ -17,3 +17,8 @@
 
 - refactor: Clean up response handling
 
+
+## [0.3.2-202610021831] - 2026-10-02
+
+### Fixed
+- infra: watchdog re-published server.json with live remote https://narrow-precise-las-days.trycloudflare.com/mcp

@@ -6,12 +6,12 @@
     "url": "https://github.com/astra-intelligence/web2md-mcp",
     "source": "github"
   },
-  "version": "0.3.2",
+  "version": "0.3.2-202610021831",
   "websiteUrl": "https://grantshatz.gumroad.com/l/mpkqyq",
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://chairs-july-lift-efficiently.trycloudflare.com/mcp"
+      "url": "https://narrow-precise-las-days.trycloudflare.com/mcp"
     }
   ]
 }
