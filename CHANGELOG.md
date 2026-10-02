@@ -27,3 +27,8 @@
 
 ### Fixed
 - infra: watchdog re-published server.json with live remote https://narrow-precise-las-days.trycloudflare.com/mcp
+
+## [0.3.4] - 2026-10-02
+
+### Fixed
+- infra: watchdog re-published server.json with live remote https://talking-inn-dive-fuel.trycloudflare.com/mcp
