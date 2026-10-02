@@ -13,13 +13,5 @@
       "type": "streamable-http",
       "url": "https://chairs-july-lift-efficiently.trycloudflare.com/mcp"
     }
-  ],
-  "installations": [
-    {
-      "type": "cli",
-      "command": "uvx",
-      "args": ["web2md-mcp"],
-      "description": "Run via uvx (pip-based PyPI package). Requires Python 3.10+."
-    }
   ]
 }
