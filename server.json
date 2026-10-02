@@ -6,8 +6,14 @@
     "url": "https://github.com/astra-intelligence/web2md-mcp",
     "source": "github"
   },
-  "version": "0.3.0",
+  "version": "0.3.1",
   "websiteUrl": "https://grantshatz.gumroad.com/l/mpkqyq",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://damaged-recipients-edit-several.trycloudflare.com/mcp"
+    }
+  ],
   "installations": [
     {
       "type": "cli",
