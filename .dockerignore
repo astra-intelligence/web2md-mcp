@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.git/
+.gitignore
+.github/
+CHANGELOG.md
+server.json.bak
