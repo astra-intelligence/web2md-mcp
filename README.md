@@ -6,9 +6,30 @@ An MCP (Model Context Protocol) server that converts public webpages to clean, r
 
 Works with **Claude Desktop, Cursor, Continue.dev, Windsurf, and any MCP-compatible client**.
 
-## Quick Start
+## Quick Start — Remote (no install, 30 seconds)
 
-### From source (GitHub)
+The fastest way to try it: add the hosted remote server to any MCP client. No code, no install.
+
+**Claude Desktop** — add to `claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "web2md": {
+      "type": "http",
+      "url": "https://reasonable-except-include-wilderness.trycloudflare.com/mcp"
+    }
+  }
+}
+```
+
+**Cursor** — Settings → MCP → Add new MCP server → type `http`, URL above.
+
+**Claude Code** — `claude mcp add web2md --transport http https://reasonable-except-include-wilderness.trycloudflare.com/mcp`
+
+> The remote URL is also published on the [official MCP registry](https://registry.modelcontextprotocol.io) as `io.github.astra-intelligence/web2md`, so it stays discoverable even if this tunnel rotates.
+
+## Quick Start — Local (from source)
 
 ```bash
 git clone https://github.com/astra-intelligence/web2md-mcp.git
@@ -17,17 +38,7 @@ pip install .
 # or: uv sync
 ```
 
-### Using pip (once published)
-
-> ⏳ Pending PyPI publication. Until then, use the source install above.
-
-```bash
-pip install web2md-mcp
-```
-
-### Using uvx (once published)
-
-Add to your Claude Desktop config (`claude_desktop_config.json`):
+Then add to your client config:
 
 ```json
 {
@@ -39,6 +50,8 @@ Add to your Claude Desktop config (`claude_desktop_config.json`):
   }
 }
 ```
+
+> ⏳ PyPI publication pending. Until then, use the source install above.
 
 ## Usage
 
