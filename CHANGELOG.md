@@ -32,3 +32,8 @@
 
 ### Fixed
 - infra: watchdog re-published server.json with live remote https://talking-inn-dive-fuel.trycloudflare.com/mcp
+
+## [0.3.5] - 2026-10-03
+
+### Fixed
+- infra: watchdog re-published server.json with live remote https://reasonable-except-include-wilderness.trycloudflare.com/mcp
