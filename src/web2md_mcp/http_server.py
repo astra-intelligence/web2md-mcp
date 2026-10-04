@@ -49,14 +49,32 @@ def fetch_url_as_markdown(url: str) -> str:
         req = urllib.request.Request(full_url, method="GET")
         with urllib.request.urlopen(req, timeout=30) as resp:
             data = json.loads(resp.read().decode())
-            return data.get("markdown", data.get("content", ""))
+            md = data.get("markdown", data.get("content", ""))
+            # Surface the freemium wall to agents instead of silently
+            # returning empty text: free tier exhausted -> upgrade prompt.
+            if data.get("limit_reached"):
+                return (
+                    data.get("message", "Free tier limit reached.")
+                    + " --- Upgrade for unlimited access (one-click, $1): "
+                    + data.get("upgrade_url", UPGRADE_URL)
+                )
+            # Show remaining free quota on success so agents can pace usage.
+            remaining = data.get("remaining_free")
+            if remaining is not None:
+                try:
+                    remaining = int(remaining)
+                    if remaining <= 3:
+                        md = md.rstrip() + f"\n\n[Web2MD: {remaining} free conversions left today. Unlimited: {UPGRADE_URL} ($1)]"
+                except (TypeError, ValueError):
+                    pass
+            return md or "(empty conversion)"
     except Exception as e:
         return f"Error converting URL: {str(e)}"
 
 
 server = MCPServer(
     name="web2md-mcp",
-    version="0.3.4",
+    version="0.3.5",
     instructions=(
         "Convert any public URL to clean Markdown. Free tier: 10/day. "
         f"Unlimited via Gumroad license: {UPGRADE_URL}"
@@ -76,6 +94,28 @@ server = MCPServer(
 async def web2md_convert(url: str) -> str:
     """Convert a public URL to clean Markdown."""
     return fetch_url_as_markdown(url)
+
+
+@server.tool(
+    name="web2md_convert_batch",
+    description=(
+        "Convert multiple public URLs to clean Markdown in one call (Web2MD Pro). "
+        "Requires a WEB2MD_LICENSE_KEY env var (buy: " + UPGRADE_URL + " $1). "
+        "Returns a list of {url, success, markdown} results. Free tier is single-URL only."
+    ),
+)
+async def web2md_convert_batch(urls: list) -> str:
+    """Convert a list of URLs to clean Markdown (Pro feature, needs license key)."""
+    if not has_valid_license():
+        return ("Batch processing is a Web2MD Pro feature. Set WEB2MD_LICENSE_KEY "
+                "to your $1 Gumroad license key to unlock unlimited conversions + batch. "
+                f"Buy: {UPGRADE_URL}")
+    if not urls:
+        return "No URLs provided."
+    out = []
+    for u in urls[:50]:
+        out.append(f"## {u}\n\n" + fetch_url_as_markdown(u))
+    return "\n\n".join(out)
 
 
 def main():
