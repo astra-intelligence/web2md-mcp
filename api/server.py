@@ -20,6 +20,25 @@ GUMROAD_PRODUCT_PERMALINK = "mpkqyq"              # Web2MD Gumroad permalink
 GUMROAD_TOKEN = os.environ.get("GUMROAD_ACCESS_TOKEN", "p-Uf5GJw5bzyfKFkXIq6NtKzxCD_RfcswhqZr1Hd4nI")
 FREE_DAILY_LIMIT = 10  # Free tier: 10 conversions/day per IP
 
+# Durable usage log (JSONL) so the funnel can be measured across restarts.
+USAGE_LOG = os.path.join(os.path.dirname(os.path.abspath(__file__)), "usage.log")
+
+def _log_usage(event: str, ip: str, url: str = "", license_key: str = "", **extra):
+    """Append one line to the usage log. Never raises."""
+    try:
+        rec = {
+            "ts": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+            "event": event,
+            "ip": ip,
+            "url": url[:200],
+            "has_license": bool(license_key),
+        }
+        rec.update(extra)
+        with open(USAGE_LOG, "a") as f:
+            f.write(json.dumps(rec) + "\n")
+    except Exception:
+        pass
+
 # In-memory rate limit tracker
 # Structure: {ip: {"date": date_obj, "count": int}}
 rate_limits: dict = {}
@@ -236,6 +255,7 @@ def convert():
     allowed, remaining = _check_rate_limit(ip, license_key)
 
     if not allowed:
+        _log_usage("limit_reached", ip, url, license_key, remaining=0)
         return jsonify(
             {
                 "success": False,
@@ -249,6 +269,7 @@ def convert():
         )
 
     result = fetch_as_markdown(url)
+    _log_usage("convert", ip, url, license_key, remaining=remaining, char_count=result.get("char_count", 0))
     result["remaining_free"] = remaining
     result["limit"] = FREE_DAILY_LIMIT
     result["upgrade_url"] = "https://grantshatz.gumroad.com/l/mpkqyq"
