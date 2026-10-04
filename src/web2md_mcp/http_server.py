@@ -2,7 +2,7 @@
 Web2MD MCP Server — streamable-http transport (mcp 2.x).
 
 Wraps the Web2MD REST API (http://167.233.135.161:9999/api/convert) as an MCP
-server so AI agents can convert URLs to clean Markdown. Free tier 10/day/IP;
+server so AI agents can convert URLs to clean Markdown. Free tier 5/day/IP;
 unlimited via Gumroad license key (WEB2MD_LICENSE_KEY env var).
 
 Run:  web2md-mcp-http [port]
@@ -76,7 +76,7 @@ server = MCPServer(
     name="web2md-mcp",
     version="0.3.5",
     instructions=(
-        "Convert any public URL to clean Markdown. Free tier: 10/day. "
+        "Convert any public URL to clean Markdown. Free tier: 5/day. "
         f"Unlimited via Gumroad license: {UPGRADE_URL}"
     ),
 )
@@ -87,7 +87,7 @@ server = MCPServer(
     description=(
         "Convert any public URL to clean, readable Markdown. Strips ads, "
         "navigation, and boilerplate. Returns LLM-ready text for RAG, "
-        "research, and content extraction. Free: 10/day. Unlimited: set "
+        "research, and content extraction. Free: 5/day. Unlimited: set "
         f"WEB2MD_LICENSE_KEY env var. Buy: {UPGRADE_URL} ($1+)"
     ),
 )
