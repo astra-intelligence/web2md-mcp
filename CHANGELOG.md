@@ -37,3 +37,8 @@
 
 ### Fixed
 - infra: watchdog re-published server.json with live remote https://reasonable-except-include-wilderness.trycloudflare.com/mcp
+
+## [0.3.6] - 2026-10-06
+
+### Fixed
+- infra: watchdog re-published server.json with live remote https://www-months-resistance-pay.trycloudflare.com/mcp

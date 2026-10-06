@@ -6,12 +6,12 @@
     "url": "https://github.com/astra-intelligence/web2md-mcp",
     "source": "github"
   },
-  "version": "0.3.5",
+  "version": "0.3.6",
   "websiteUrl": "https://grantshatz.gumroad.com/l/mpkqyq",
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://reasonable-except-include-wilderness.trycloudflare.com/mcp"
+      "url": "https://www-months-resistance-pay.trycloudflare.com/mcp"
     }
   ]
 }
