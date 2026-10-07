@@ -179,7 +179,9 @@ def fetch_as_markdown(url):
             url,
             timeout=30,
             headers={
-                "User-Agent": "Mozilla/5.0 (compatible; Web2MD/1.0; +https://github.com/astra-intelligence/saas-landing-page-template)"
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                "Accept-Language": "en-US,en;q=0.9",
             },
         )
         resp.raise_for_status()
