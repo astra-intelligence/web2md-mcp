@@ -17,7 +17,7 @@ The fastest way to try it: add the hosted remote server to any MCP client. No co
   "mcpServers": {
     "web2md": {
       "type": "http",
-      "url": "https://reasonable-except-include-wilderness.trycloudflare.com/mcp"
+      "url": "https://www-months-resistance-pay.trycloudflare.com/mcp"
     }
   }
 }
@@ -25,7 +25,7 @@ The fastest way to try it: add the hosted remote server to any MCP client. No co
 
 **Cursor** — Settings → MCP → Add new MCP server → type `http`, URL above.
 
-**Claude Code** — `claude mcp add web2md --transport http https://reasonable-except-include-wilderness.trycloudflare.com/mcp`
+**Claude Code** — `claude mcp add web2md --transport http https://www-months-resistance-pay.trycloudflare.com/mcp`
 
 > The remote URL is also published on the [official MCP registry](https://registry.modelcontextprotocol.io) as `io.github.astra-intelligence/web2md`, so it stays discoverable even if this tunnel rotates.
 
