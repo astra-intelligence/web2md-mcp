@@ -42,3 +42,8 @@
 
 ### Fixed
 - infra: watchdog re-published server.json with live remote https://www-months-resistance-pay.trycloudflare.com/mcp
+
+## [0.3.7] - 2026-10-08
+
+### Fixed
+- infra: watchdog re-published server.json with live remote https://domains-directed-lesson-bear.trycloudflare.com/mcp
