@@ -52,3 +52,8 @@
 
 ### Fixed
 - infra: watchdog re-published server.json with live remote https://mailing-poly-mariah-released.trycloudflare.com/mcp
+
+## [0.3.9] - 2026-10-15
+
+### Fixed
+- infra: watchdog re-published server.json with live remote https://ent-broad-workflow-inquiries.trycloudflare.com/mcp
