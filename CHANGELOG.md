@@ -47,3 +47,8 @@
 
 ### Fixed
 - infra: watchdog re-published server.json with live remote https://domains-directed-lesson-bear.trycloudflare.com/mcp
+
+## [0.3.8] - 2026-10-15
+
+### Fixed
+- infra: watchdog re-published server.json with live remote https://mailing-poly-mariah-released.trycloudflare.com/mcp
