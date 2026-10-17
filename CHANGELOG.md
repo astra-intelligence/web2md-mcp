@@ -62,3 +62,8 @@
 
 ### Fixed
 - infra: watchdog re-published server.json with live remote https://wallet-views-marriage-brad.trycloudflare.com/mcp
+
+## [0.3.11] - 2026-10-17
+
+### Fixed
+- infra: watchdog re-published server.json with live remote https://underlying-macro-islamic-split.trycloudflare.com/mcp
