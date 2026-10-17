@@ -57,3 +57,8 @@
 
 ### Fixed
 - infra: watchdog re-published server.json with live remote https://ent-broad-workflow-inquiries.trycloudflare.com/mcp
+
+## [0.3.10] - 2026-10-17
+
+### Fixed
+- infra: watchdog re-published server.json with live remote https://wallet-views-marriage-brad.trycloudflare.com/mcp
