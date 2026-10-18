@@ -67,3 +67,8 @@
 
 ### Fixed
 - infra: watchdog re-published server.json with live remote https://underlying-macro-islamic-split.trycloudflare.com/mcp
+
+## [0.3.12] - 2026-10-18
+
+### Fixed
+- infra: watchdog re-published server.json with live remote https://throws-observed-francisco-supervisor.trycloudflare.com/mcp
