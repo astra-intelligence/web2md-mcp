@@ -72,3 +72,8 @@
 
 ### Fixed
 - infra: watchdog re-published server.json with live remote https://throws-observed-francisco-supervisor.trycloudflare.com/mcp
+
+## [0.3.13] - 2026-10-20
+
+### Fixed
+- infra: watchdog re-published server.json with live remote https://peer-fascinating-forming-results.trycloudflare.com/mcp
