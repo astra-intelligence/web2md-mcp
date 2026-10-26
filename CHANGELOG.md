@@ -77,3 +77,8 @@
 
 ### Fixed
 - infra: watchdog re-published server.json with live remote https://peer-fascinating-forming-results.trycloudflare.com/mcp
+
+## [0.3.50] - 2026-10-26
+
+### Fixed
+- infra: watchdog re-published server.json with live remote https://planning-boston-design-repeat.trycloudflare.com/mcp
